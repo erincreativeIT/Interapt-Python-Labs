@@ -1,0 +1,10 @@
+from time import sleep
+import math
+
+def delay(function, ms, *args):
+    sleep(ms / 1000)
+    return function(*args)
+print("Square root after specific milliseconds")
+print(delay(lambda num: math.sqrt(num), 100, 16))
+print(delay(lambda num: math.sqrt(num), 1000, 100))
+print(delay(lambda num: math.sqrt(num), 2000, 25100))
